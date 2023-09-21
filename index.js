@@ -4,8 +4,10 @@ const express = require("express")
 const app = express();
 const path = require('path')
 const indexPage = (path.join(__dirname, 'index.html'))
-
 app.get('/', (req,res)=>res.sendFile(indexPage))
+const styleSheet = path.join(__dirname, 'style.css')
+app.get('/style.css', (req,res)=>res.sendFile(styleSheet))
+
 
 
 
